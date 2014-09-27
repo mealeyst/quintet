@@ -1,5 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/quintet-cms/quintet.png?label=ready&title=Ready)](https://waffle.io/quintet-cms/quintet)
 # Quintet
+
+[![Stories in Ready](https://badge.waffle.io/quintet-cms/quintet.png?label=ready&title=Ready)](https://waffle.io/quintet-cms/quintet)
+[![Code Health](https://landscape.io/github/quintet-cms/quintet/master/landscape.png)](https://landscape.io/github/quintet-cms/quintet/master)
 
 ## Getting Started
 
