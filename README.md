@@ -1,7 +1,10 @@
 # Quintet
+_A Bootstrapped Markdown CMS powered by Django_
 
-[![Stories in Ready](https://badge.waffle.io/quintet-cms/quintet.png?label=ready&title=Ready)](https://waffle.io/quintet-cms/quintet)
+[![Travis](http://img.shields.io/travis/quintet-cms/quintet.svg)](https://travis-ci.org/quintet-cms/quintet)
 [![Code Health](https://landscape.io/github/quintet-cms/quintet/master/landscape.png)](https://landscape.io/github/quintet-cms/quintet/master)
+[![pypi](http://img.shields.io/pypi/v/quintet.svg)](https://pypi.python.org/pypi/quintet/)
+![License](http://img.shields.io/pypi/l/quintet.svg)
 
 ## Getting Started
 
@@ -24,4 +27,4 @@
 5. `./manage.py migrate`
 6. `./manage.py createsuperuser`
 7. `./manage.py runserver`
-8. <http://127.0.0.1:8000/quintet/>
+8. Open <http://127.0.0.1:8000/quintet/>
