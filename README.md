@@ -6,6 +6,8 @@ _A Bootstrapped Markdown CMS powered by Django_
 [![pypi](http://img.shields.io/pypi/v/quintet.svg)](https://pypi.python.org/pypi/quintet/)
 ![License](http://img.shields.io/pypi/l/quintet.svg)
 
+![Screenshot of edit post screen](http://thegoods.aj7may.com/content/images/2014/Sep/Screen_Shot_2014_09_29_at_11_23_26_PM.png)
+
 ## Getting Started
 
 1. `pip install django`
