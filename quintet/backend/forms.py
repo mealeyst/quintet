@@ -1,3 +1,5 @@
+# pylint: disable=unexpected-keyword-arg, no-value-for-parameter, no-member
+
 from django import forms
 from django.contrib.auth.forms import SetPasswordForm
 from django.contrib.auth.models import User
