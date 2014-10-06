@@ -1,5 +1,3 @@
 doc-warnings: yes
 test-warnings: no
 strictness: medium
-uses:
-    - django

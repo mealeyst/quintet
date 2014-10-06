@@ -13,6 +13,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
+        'django>=1.7.0',
         'django-bootstrap-markdown>=1.8.0',
         'django-bootstrap-typeahead>=1.1.5',
         'django-password-strength>=1.0.2',
