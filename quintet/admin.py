@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import *
+from .models import (Profile, Section, Tag, Post, Page,Comment, Role,
+    Contributor, RecentActivity)
 
 
 admin.site.register(Profile)

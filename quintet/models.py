@@ -226,7 +226,6 @@ class Page(models.Model):
         return markdown(self.markdown)
 
     def get_absolute_url(self):
-        return None
         return reverse('quintet.blog.views.view_page', kwargs={
             'post': self.slug,
         })
@@ -332,6 +331,9 @@ class RecentActivity(models.Model):
 
     class Meta:
         ordering = ('-timestamp',)
+
+    def __unicode__(self):
+        return self.change_message
 
     def url(self):
         """Return the URL to edit the object represented by this entry."""

@@ -6,16 +6,19 @@ from django.http import JsonResponse
 from django.core.exceptions import PermissionDenied
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.urlresolvers import reverse
-from django.db.models import Count
 from django.utils.text import slugify
 from django.contrib.auth.decorators import login_required, permission_required
-from django.contrib.auth.models import Permission
+from django.contrib.auth.models import User, Permission
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
 from django.core.mail import send_mail
 from django_password_strength.widgets import PasswordStrengthInput
-from ..models import *
-from .forms import *
+from ..models import (Profile, Section, Tag, Post, Page,Comment, Role,
+    Contributor, RecentActivity)
+from .forms import (PostForm, PageForm, AddContributorForm,
+    EditContributorForm, AddReviewerForm, CommentForm, SettingsForm,
+    AddUserForm, ChangePhotoForm, PermissionForm, SectionForm,
+    SetPasswordFormWithMeter)
 
 
 def can_edit(user, post):
@@ -99,7 +102,7 @@ def create_post(request):
     author = Contributor()
     author.user = request.user
     author.post = post
-    role, created = Role.objects.get_or_create(
+    role, _ = Role.objects.get_or_create(
         slug='author',
         defaults={
             'title': 'Author',
