@@ -1,7 +1,5 @@
 """This module contains all the view functions for Quintet."""
 
-# pylint: disable=unexpected-keyword-arg, no-value-for-parameter, no-member
-
 from datetime import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse

@@ -1,7 +1,5 @@
 """This module contains models for Quintet."""
 
-# pylint: disable=unexpected-keyword-arg, no-value-for-parameter, no-member
-
 from django.db import models
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
