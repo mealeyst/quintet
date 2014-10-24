@@ -14,11 +14,10 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django_password_strength.widgets import PasswordStrengthInput
 from ..models import (Profile, Section, Tag, Post, Page,Comment, Role,
-    Contributor, RecentActivity)
+    Contributor)
 from .forms import (PostForm, PageForm, AddContributorForm,
     EditContributorForm, AddReviewerForm, CommentForm, SettingsForm,
-    AddUserForm, ChangePhotoForm, PermissionForm, SectionForm,
-    SetPasswordFormWithMeter)
+    AddUserForm, ChangePhotoForm, PermissionForm, SectionForm)
 
 
 def can_edit(user, post):
