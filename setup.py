@@ -4,7 +4,7 @@ from distutils.sysconfig import get_python_lib
 
 setup(
     name='quintet',
-    version='1.0.0b2',
+    version='1.0.0b3',
     url='http://www.quintet.io/',
     author='A.J. May',
     author_email='aj7may@gmail.com',
