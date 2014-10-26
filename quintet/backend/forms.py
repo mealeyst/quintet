@@ -8,15 +8,15 @@ from django.template import loader
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from django.utils.text import slugify
-from django.utils.translation import ugettext, ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 from django_bootstrap_markdown.widgets import MarkdownInput
-from django_bootstrap_typeahead.fields import *
+from django_bootstrap_typeahead.fields import MultipleTypeaheadField
 from django_password_strength.widgets import PasswordStrengthInput
 from ..models import Profile, Section, Role, Tag
 
 
 def build_tag(value):
-    tag, created = Tag.objects.get_or_create(
+    tag, _ = Tag.objects.get_or_create(
         slug=slugify(value),
         defaults={'title': value}
     )
@@ -63,7 +63,7 @@ class PageForm(forms.Form):
 
 
 def build_role(value):
-    role, created = Role.objects.get_or_create(
+    role, _ = Role.objects.get_or_create(
         slug=slugify(value),
         defaults={'title': value}
     )

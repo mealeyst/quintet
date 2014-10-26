@@ -14,11 +14,10 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django_password_strength.widgets import PasswordStrengthInput
 from ..models import (Profile, Section, Tag, Post, Page,Comment, Role,
-    Contributor, RecentActivity)
+    Contributor)
 from .forms import (PostForm, PageForm, AddContributorForm,
     EditContributorForm, AddReviewerForm, CommentForm, SettingsForm,
-    AddUserForm, ChangePhotoForm, PermissionForm, SectionForm,
-    SetPasswordFormWithMeter)
+    AddUserForm, ChangePhotoForm, PermissionForm, SectionForm)
 
 
 def can_edit(user, post):
@@ -328,7 +327,7 @@ def add_reviewer(request, pk):
     absolute_url = "%s://%s%s" % (
         request.scheme,
         request.get_host(),
-        reverse('quintet.views.view_post', kwargs={'pk': post.pk}),
+        reverse('quintet.backend.views.view_post', kwargs={'pk': post.pk}),
     )
 
     send_mail(
@@ -755,7 +754,7 @@ def add_user(request):
             form.save(request)
 
             messages.success(request, "New user created.")
-            return redirect('quintet.views.list_users')
+            return redirect('quintet.backend.views.list_users')
     else:
         form = AddUserForm()
 
