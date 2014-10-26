@@ -327,7 +327,7 @@ def add_reviewer(request, pk):
     absolute_url = "%s://%s%s" % (
         request.scheme,
         request.get_host(),
-        reverse('quintet.views.view_post', kwargs={'pk': post.pk}),
+        reverse('quintet.backend.views.view_post', kwargs={'pk': post.pk}),
     )
 
     send_mail(
@@ -754,7 +754,7 @@ def add_user(request):
             form.save(request)
 
             messages.success(request, "New user created.")
-            return redirect('quintet.views.list_users')
+            return redirect('quintet.backend.views.list_users')
     else:
         form = AddUserForm()
 
