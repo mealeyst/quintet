@@ -25,6 +25,12 @@ _A Bootstrapped Markdown CMS powered by Django_
             'quintet',
             ...
         )
+        
+        urlpatterns += patterns('',
+            ...
+            url(r'^', include('quintet.urls')),
+            ...
+        )
 
 5. `./manage.py migrate`
 6. `./manage.py createsuperuser`
